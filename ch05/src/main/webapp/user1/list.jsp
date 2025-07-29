@@ -72,8 +72,9 @@
 				<th><%= user1VO.getHp() %></th>
 				<th><%= user1VO.getAge() %></th>
 				<th>
-					<a href = "./modify.jsp">수정</a>
-					<a href = "#">삭제</a>
+					<!-- 수정하고자하는 사용자 아이디를 modify.jsp로 전송-->
+					<a href = "./modify.jsp?user_id=<%= user1VO.getUser_id() %>">수정</a>
+					<a href = "./delete.jsp?user_id=<%= user1VO.getUser_id() %>">삭제</a>
 				</th>
 			</tr>
 			
