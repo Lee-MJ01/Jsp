@@ -27,7 +27,7 @@ public class User1DAO {
 	public void insertUser1(User1DTO dto) {		
 		try {
 			Context ctx = (Context) new InitialContext().lookup("java:comp/env");
-			DataSource ds = (DataSource) ctx.lookup("jdbc/chhak0503");
+			DataSource ds = (DataSource) ctx.lookup("jdbc/lee0216");
 			
 			Connection conn = ds.getConnection();
 			
@@ -53,7 +53,7 @@ public class User1DAO {
 		
 		try {
 			Context ctx = (Context) new InitialContext().lookup("java:comp/env");
-			DataSource ds = (DataSource) ctx.lookup("jdbc/chhak0503");
+			DataSource ds = (DataSource) ctx.lookup("jdbc/lee0216");
 			
 			Connection conn = ds.getConnection();
 			
@@ -87,7 +87,7 @@ public class User1DAO {
 		
 		try {
 			Context ctx = (Context) new InitialContext().lookup("java:comp/env");
-			DataSource ds = (DataSource) ctx.lookup("jdbc/chhak0503");
+			DataSource ds = (DataSource) ctx.lookup("jdbc/lee0216");
 			
 			Connection conn = ds.getConnection();
 						
@@ -120,7 +120,7 @@ public class User1DAO {
 		
 		try {
 			Context ctx = (Context) new InitialContext().lookup("java:comp/env");
-			DataSource ds = (DataSource) ctx.lookup("jdbc/chhak0503");
+			DataSource ds = (DataSource) ctx.lookup("jdbc/lee0216");
 			
 			Connection conn = ds.getConnection();
 						
@@ -144,7 +144,7 @@ public class User1DAO {
 	public void deleteUser1(String user_id) {
 		try {
 			Context ctx = (Context) new InitialContext().lookup("java:comp/env");
-			DataSource ds = (DataSource) ctx.lookup("jdbc/chhak0503");
+			DataSource ds = (DataSource) ctx.lookup("jdbc/lee0216");
 			
 			Connection conn = ds.getConnection();
 						
