@@ -5,56 +5,58 @@
 		<meta charset="UTF-8">
 		<title>user1::register</title>
 		<script>
-		document.addEventListener('DOMContentLoaded', function(){
-			const form = document.formUser1;
-			
-			form.addEventListener('submit', function(e){
-				e.preventDefault();
+		
+			document.addEventListener('DOMContentLoaded', function(){
 				
-				//JSON 생성(폼에 입력한 데이터)
-				const jsonData = {
-						"user_id": this.user_id.value,
-						"name": this.name.value,
-						"hp": this.hp.value,
-						"age": this.age.value
-				};
-				console.log(jsonData);
+				const form = document.formUser1;
 				
-				// 서버 전송
-				fetch('/ch09/js/user1/register.do', {
-					method: 'POST',
-					headers: {"Content-Type":"application/json"}, // 반드시 설정
-					body: JSON.stringify(jsonData)
-				})
-					.then(res => res.json())
-					.then(data => {
-						// 서버에서 전송된 JSON 데이터
-						console.log(data);
-						
-						if(data) {
-							alert('등록 성공!');
-							location.href = '/ch09/js/user1/list.do';
-						}else{
-							alert('등록 실패!');
-							location.href = '/ch09/js/user1/list.do';
-						}
-						
+				form.addEventListener('submit', function(e){
+					e.preventDefault();
+					
+					// JSON 생성(폼에 입력한 데이터)
+					const jsonData = {
+						"user_id": this.user_id.value, 
+						"name": this.name.value, 
+						"hp": this.hp.value, 
+						"age": this.age.value 
+					};
+					
+					console.log(jsonData);
+					
+					// 서버 전송
+					fetch('/ch09/js/user1/register.do', {
+						method: 'POST',
+						headers: {"Content-Type": "application/json"}, // 반드시 설정
+						body: JSON.stringify(jsonData)
 					})
-					.catch(err => {
-						console.log(err);
-					});
-				
-			})
-		});
-		</script>
+						.then(res => res.json())
+						.then(data => {
+							// 서버에서 전송된 JSON 데이터							
+							console.log(data);
+							
+							if(data.result > 0){
+								alert('등록 성공!');								
+							}else {
+								alert('등록 실패!');								
+							}
+							
+							// 목록 이동
+							location.href = '/ch09/js/user1/list.do';
+						})
+						.catch(err => {
+							console.log(err);
+						});
+				});				
+			});
+		</script>		
 	</head>
 	<body>
-		<h3>User1 등록</h3>
+		<h3>JS/User1 등록</h3>
 		
 		<a href="/ch09">처음으로</a>
 		<a href="/ch09/js/user1/list.do">목록이동</a>
 		
-		<form method="post">
+		<form name="formUser1">
 			<table border="1">
 				<tr>
 					<td>아이디</td>

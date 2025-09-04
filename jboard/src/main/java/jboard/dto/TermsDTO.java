@@ -1,9 +1,11 @@
-package jboard.DTO;
+package jboard.dto;
 
 public class TermsDTO {
+
 	private int no;
 	private String terms;
 	private String privacy;
+	
 	public int getNo() {
 		return no;
 	}
@@ -26,6 +28,7 @@ public class TermsDTO {
 	public String toString() {
 		return "TermsDTO [no=" + no + ", terms=" + terms + ", privacy=" + privacy + "]";
 	}
+	
 	
 	
 }

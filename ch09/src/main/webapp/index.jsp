@@ -6,7 +6,7 @@
 		<title>index</title>
 		<%--
 			날짜 : 2025/07/31
-			이름 : 이민준
+			이름 : 김철학
 			내용 : MVC 아키텍처 실습
 			
 			index.jsp
@@ -21,9 +21,6 @@
 		<a href="/ch09/hello.do">hello</a>
 		<a href="/ch09/welcome.do">welcome</a>
 		<a href="/ch09/greeting.do">greeting</a>
-		
-		<h4>JS/USER1 CRUD</h4>		
-		<a href="/ch09/js/user1/list.do">user1 목록</a>
 		
 		<h4>USER1 CRUD</h4>		
 		<a href="/ch09/user1/list.do">user1 목록</a>
@@ -47,3 +44,16 @@
 		<a href="/ch09/user7/list.do">user7 목록</a>		
 	</body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+

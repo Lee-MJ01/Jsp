@@ -3,13 +3,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>user</title>
-    <link rel="stylesheet" href="../css/style.css"/>
+    <title>User</title>
+    <link rel="stylesheet" href="/jboard/css/style.css"/>
 </head>
 <body>
     <div id="wrapper">
         <header>
             <h3>
-                <a href="/index.html" class="title">Board Project</a>
+                <a href="/jboard" class="title">Board Project</a>
             </h3>
         </header>
+        

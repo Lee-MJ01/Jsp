@@ -15,13 +15,13 @@ import jakarta.servlet.http.HttpServletResponse;
 import service.User1Service;
 
 @WebServlet("/js/user1/getUser1All.do")
-public class GetUser1AllController extends HttpServlet {
-	private static final long serialVersionUID = 1L;
+public class GetUser1AllController extends HttpServlet{
 
 	private User1Service service = User1Service.getInstance();
 	
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
 		// 목록 데이터 요청
 		List<User1DTO> dtoList = service.findAll();
 		
@@ -31,18 +31,9 @@ public class GetUser1AllController extends HttpServlet {
 		
 		// JSON 출력(클라이언트 전송)
 		resp.setContentType("application/json; charset=UTF-8");
+		
 		PrintWriter out = resp.getWriter();
 		out.print(strJson);
 		
 	}
 }
-
-
-
-
-
-
-
-
-
-

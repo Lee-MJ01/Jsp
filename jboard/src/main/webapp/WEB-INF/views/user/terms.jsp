@@ -1,5 +1,5 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ include file="./_header.jsp" %>
+<%@ include file="./_head.jsp" %>
 <main id="user">
     <section class="terms">
         <h2 class="tit">사이트 이용약관</h2>
@@ -11,7 +11,6 @@
                 </td>
             </tr>
         </table>
-
         <h2 class="tit">개인정보 취급방침</h2>
         <table border="1">                    
             <tr>
@@ -29,4 +28,4 @@
 
     </section>
 </main>
-<%@ include file="./_footer.jsp" %>
+<%@ include file="./_tail.jsp" %>

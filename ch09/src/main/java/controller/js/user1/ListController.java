@@ -15,10 +15,17 @@ import service.User1Service;
 @WebServlet("/js/user1/list.do")
 public class ListController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+
+	private User1Service service = User1Service.getInstance();
 	
-	private User1Service service = User1Service.getInstance(); 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		
+		// 목록 데이터 요청
+		List<User1DTO> dtoList = service.findAll();
+		
+		
+		
 		
 		RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/views/js/user1/list.jsp");
 		dispatcher.forward(req, resp);
@@ -26,7 +33,9 @@ public class ListController extends HttpServlet {
 	
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		
+	
+	
 	}
-
+	
+	
 }

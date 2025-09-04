@@ -1,6 +1,7 @@
-package jboard.DTO;
+package jboard.dto;
 
 public class UserDTO {
+	
 	private String usid;
 	private String pass;
 	private String us_name;
@@ -14,6 +15,7 @@ public class UserDTO {
 	private String reg_ip;
 	private String reg_date;
 	private String leave_date;
+	
 	public String getUsid() {
 		return usid;
 	}
@@ -92,12 +94,13 @@ public class UserDTO {
 	public void setLeave_date(String leave_date) {
 		this.leave_date = leave_date;
 	}
+	
 	@Override
 	public String toString() {
 		return "UserDTO [usid=" + usid + ", pass=" + pass + ", us_name=" + us_name + ", nick=" + nick + ", email="
 				+ email + ", hp=" + hp + ", us_role=" + us_role + ", zip=" + zip + ", addr1=" + addr1 + ", addr2="
 				+ addr2 + ", reg_ip=" + reg_ip + ", reg_date=" + reg_date + ", leave_date=" + leave_date + "]";
 	}
-	
+
 	
 }

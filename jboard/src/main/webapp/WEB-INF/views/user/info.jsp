@@ -1,5 +1,5 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ include file="./_header.jsp" %>
+<%@ include file="./_head.jsp" %>
 <main id="user">
     <section class="info">
         <form action="#" method="post">
@@ -90,4 +90,4 @@
         </form>
     </section>
 </main>
-<%@ include file="./_footer.jsp" %>
+<%@ include file="./_tail.jsp" %>

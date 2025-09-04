@@ -8,19 +8,23 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import jboard.DTO.TermsDTO;
+import jboard.dto.TermsDTO;
 import jboard.service.TermsService;
 
 @WebServlet("/user/terms.do")
 public class TermsController extends HttpServlet {
+
 	private static final long serialVersionUID = 1L;
 	
 	private TermsService service = TermsService.INSTANCE;
+	
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		TermsDTO termsDTO = service.findById(1);
 		
-		req.setAttribute("termsDTO", termsDTO);
+		TermsDTO termsDTO = service.findById(1);
+		//System.out.println(termsDTO);
+		
+		req.setAttribute("termsDTO", termsDTO);		
 		
 		RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/views/user/terms.jsp");
 		dispatcher.forward(req, resp);
@@ -28,7 +32,6 @@ public class TermsController extends HttpServlet {
 	
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		
 	}
 
 }
